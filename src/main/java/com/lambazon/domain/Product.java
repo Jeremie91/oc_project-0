@@ -51,6 +51,9 @@ public class Product {
 
 	public void setQuantity(int quantity) {
 
+		// if condition on the value of quantity variable
+		// Display 0 if quantity < 0
+
 		if (quantity < 0)
 			this.quantity = 0;
 
@@ -64,7 +67,10 @@ public class Product {
 
 	public void setPrice(double price) {
 
-	    if (price < 0)
+		// if condition on the value of price variable
+		// Display 0 if < 0 ; 1000 if > 1000 ; else its value
+
+		if (price < 0)
         this.price = 0;
 
         else if (price > 1000)
@@ -75,7 +81,9 @@ public class Product {
 	}
 
 	public double getInventoryPrice() {
-		// TODO Auto-generated method stub
+		// Calculation of the Inventory Price
+		// price by quantity and the returns it
+		
         double inventoryPrice;
         inventoryPrice = (double) (price*quantity);
 

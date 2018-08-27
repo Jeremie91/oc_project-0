@@ -32,7 +32,9 @@ public class ProductController {
 	
 	private double calculateTotalInventoryAmount() {
 		// TODO fix calculation
-		 return 123456.78;
+		double totalAmount;
+
+		 return 123;
 		
 	}
 }
