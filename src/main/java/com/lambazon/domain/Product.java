@@ -1,7 +1,7 @@
 package com.lambazon.domain;
 
 public class Product {
-	
+
 	private Integer id;
 	private String name, description, details;
 	private int quantity;
@@ -47,12 +47,15 @@ public class Product {
 		this.details = details;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
+	public int getQuantity() { return quantity;}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+
+		if (quantity < 0)
+			this.quantity = 0;
+
+	    else
+	    	this.quantity = quantity;
 	}
 
 	public double getPrice() {
@@ -65,6 +68,7 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// TODO Auto-generated method stub
-		return 0.0;
+
+		return 1.0;
 	}
 }
