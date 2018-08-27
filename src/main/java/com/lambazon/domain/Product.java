@@ -76,7 +76,9 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// TODO Auto-generated method stub
+        double inventoryPrice;
+        inventoryPrice = (double) (price*quantity);
 
-		return 1.0;
+		return inventoryPrice;
 	}
 }
