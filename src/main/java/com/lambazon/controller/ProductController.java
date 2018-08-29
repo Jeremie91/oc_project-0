@@ -13,7 +13,7 @@ import com.lambazon.service.ProductService;
 
 @Controller
 public class ProductController {
-	
+
 	@Inject
 	private ProductService productService;
 	
@@ -30,11 +30,18 @@ public class ProductController {
 		return "product";
 	}
 	
-	private double calculateTotalInventoryAmount() {
-		// TODO fix calculation
-		double totalAmount;
+	private <products> double calculateTotalInventoryAmount() {
 
-		 return 123;
-		
+	// modification below to fix the calculation
+
+		double total = 0.0f; //initiation
+
+		for (Product ps : productService.products()) {
+
+			total += ps.getInventoryPrice();
+		}
+
+	return total; // Returns the result of the total inventory amount
 	}
-}
+
+	}

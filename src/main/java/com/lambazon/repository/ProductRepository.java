@@ -23,7 +23,7 @@ public class ProductRepository {
 		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone"));
 		products.put(++id, new Product(id, 50, 895.00, "NOKIA OEM BL-5J", "Cell Phone "));
 		products.put(++id, new Product(id, -5, -5.00, "NewProduct1", "TestAddNewProduct1"));
-		products.put(++id, new Product(id, 70, 2000.00, "NewProduct2", "TestAddNewProduct2"));
+		products.put(++id, new Product(id, 80, 2000.00, "NewProduct2", "TestAddNewProduct2"));
 	}
 	
 	public List<Product> products() {

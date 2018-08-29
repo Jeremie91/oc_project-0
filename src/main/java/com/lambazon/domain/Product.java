@@ -27,7 +27,7 @@ public class Product {
 		return name;
 	}
 
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 
@@ -35,7 +35,7 @@ public class Product {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	private void setDescription(String description) {
 		this.description = description;
 	}
 
@@ -49,10 +49,10 @@ public class Product {
 
 	public int getQuantity() { return quantity;}
 
-	public void setQuantity(int quantity) {
+	private void setQuantity(int quantity) {
 
 		// if condition on the value of quantity variable
-		// Display 0 if quantity < 0
+		// Display 0 if quantity < 0 ; else its value
 
 		if (quantity < 0)
 			this.quantity = 0;
@@ -65,7 +65,7 @@ public class Product {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	private void setPrice(double price) {
 
 		// if condition on the value of price variable
 		// Display 0 if < 0 ; 1000 if > 1000 ; else its value
@@ -82,11 +82,8 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// Calculation of the Inventory Price
-		// price by quantity and the returns it
-		
-        double inventoryPrice;
-        inventoryPrice = (double) (price*quantity);
+		// price by quantity and then returns it
 
-		return inventoryPrice;
+		return (double) (price * quantity);
 	}
 }
